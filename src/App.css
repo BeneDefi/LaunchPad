@@ -1,0 +1,73 @@
+@keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .project-card {
+    transition: all 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+  }
+  
+  .carousel-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  
+  .carousel {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .carousel:hover {
+    animation-play-state: paused;
+  }
+  
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .particle-1 {
+    width: 10px;
+    height: 10px;
+    background-color: #8B5CF6;
+    animation: float 8s ease-in-out infinite;
+  }
+  
+  .particle-2 {
+    width: 15px;
+    height: 15px;
+    background-color: #60A5FA;
+    animation: float 10s ease-in-out infinite 1s;
+  }
+  
+  .particle-3 {
+    width: 8px;
+    height: 8px;
+    background-color: #F472B6;
+    animation: float 7s ease-in-out infinite 0.5s;
+  }
